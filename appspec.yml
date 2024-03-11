@@ -5,6 +5,10 @@ files:
   - source: /
     destination: /home/ubuntu
 hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 300
+      runas: ubuntu
   AfterInstall:
     - location: scripts/install.sh
       timeout: 300
