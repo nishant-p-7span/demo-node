@@ -4,6 +4,7 @@ exports.getUser = async(req,res)=>{
     try{
          //const users = await user.find()
          //res.json(users)
+         res.json({ hello: "World" })
     }catch (err){
         res.send("Error: ", err)
     }
