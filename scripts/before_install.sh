@@ -1,5 +1,7 @@
 #!/bin/bash
+sudo apt-get install python-software-properties -y
+sudo apt-add-repository ppa:chris-lea/node.js -y
+sudo apt-get update
+sudo apt-get install nodejs -y
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-source ~/.bashrc
-nvm install node
+sudo npm i pm2 -g
