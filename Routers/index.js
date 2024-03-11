@@ -16,4 +16,9 @@ route.get('/:name',getUserByName)
 route.patch('/edit/:name',userEdit)
 
 route.delete('/delete/:name', userRM)
+
+route.get('/test', (req,res) => {
+  res.send("CICD Successful")
+})
+
 module.exports = route
