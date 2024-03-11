@@ -18,6 +18,3 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: base_location
-  name: artifact
-  discard-paths: no
