@@ -19,5 +19,5 @@ app.use(express.json())
 app.use('/',route)
 
 app.listen(PORT, function(res){
-    console.log("Server Running..." + PORT)
+    console.log("Server Running!!" + PORT)
 })
