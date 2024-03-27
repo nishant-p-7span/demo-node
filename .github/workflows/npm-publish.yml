@@ -18,6 +18,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: sudo export MONGO="${{ secrets.MONGO }}"
+    - run: echo "export MONGO=${{ secrets.MONGO }}" >> $GITHUB_ENV
     - run: npm ci
     - run: pm2 restart demo
