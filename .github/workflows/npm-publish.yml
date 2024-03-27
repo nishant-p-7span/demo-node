@@ -22,4 +22,5 @@ jobs:
         mongodb: ${{ secrets.MONGO }}
     - run: export MONGO="$mongodb"
     - run: npm ci
+    - run: pm2 stop all
     - run: pm2 start app.js
