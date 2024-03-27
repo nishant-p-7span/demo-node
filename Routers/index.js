@@ -16,5 +16,4 @@ route.get('/:name',getUserByName)
 route.patch('/edit/:name',userEdit)
 
 route.delete('/delete/:name', userRM)
-
 module.exports = route
