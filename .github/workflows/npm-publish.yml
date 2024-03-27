@@ -18,8 +18,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-      env:
-        mongodb: ${{ secrets.MONGO }}
-    - run: export MONGO="$mongodb"
+    - run: export MONGO=${{ secrets.MONGO }}
     - run: npm ci
     - run: pm2 restart demo
