@@ -4,7 +4,7 @@ const mongo = require('mongodb')
 const app = express()
 const route = require('./Routers') //calling the router file.
 require('dotenv').config()
-const url = process.env.MONGO_URL //url for db
+const url = process.env.MONGO //url for db
 const PORT = process.env.PORT || 9000
 
 mongoose.connect(url, {useNewUrlParser:true}) //connect to the database
