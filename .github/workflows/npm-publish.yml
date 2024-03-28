@@ -18,6 +18,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo "MONGO = '${{ secrets.MONGO }}'" >> .env
+    - run: echo -e "MONGO = '${{ secrets.MONGO }}'\nPORT = ${{ secrets.PORT }}" >> .env
     - run: npm ci
     - run: pm2 restart demo
