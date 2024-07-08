@@ -218,16 +218,15 @@ first make sure you are log in as root ( so our swap file be stay persistant on 
 ```sudo su``` #if you are log in as ubuntu user.
 
 Copy Paste the following commands.
-    ```
-    fallocate -l 4G /swapfile
-    chmod 600 /swapfile
-    mkswap  /swapfile
-    swapon /swapfile
-    swapon  --show
-    free -h
-
-    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-    ```
+	```
+	fallocate -l 4G /swapfile
+	chmod 600 /swapfile
+	mkswap  /swapfile
+	swapon /swapfile
+	swapon  --show
+	free -h
+	echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+	```
 
 **wildcard string for nginx config to add in location**
 ```try_files $uri $uri/ /index.html?$query_string;```
